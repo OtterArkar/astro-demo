@@ -17,7 +17,7 @@ const query = `*[_type == "product" && slug.current == "${slug}"][0]{
 const data = await client.fetch(query).then(items=>items)
 if (!data) return Astro.redirect("/404");
 ---
-<Layout title={`${''} | Unique food`}>
+<Layout title={`${data.title} | Unique food`}>
     <div class="w-full md:w-[70%] mx-auto p-4">
         <div class="mt-12 space-y-4">
             <h1 class="text-3xl font-bold">{data.title}</h1>
