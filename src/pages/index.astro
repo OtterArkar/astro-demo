@@ -13,7 +13,6 @@ const query = `*[_type == "product"]{
   "summary":blurb
 }`;
 const data = await client.fetch(query).then(items=>items)
-console.log(data)
 ---
 
 <Layout title="Home Page">
