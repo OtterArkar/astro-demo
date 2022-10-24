@@ -2,7 +2,6 @@
     import Card from '@components/common/Card.svelte'
     export let data;
     export let title;
-    export const revalidate = 100; 
 </script>
 <main >
     <h1 class="text-3xl m-4 mt-12 mb-4 font-bold border-b-4 border-blue-500 max-w-max">{title}</h1>

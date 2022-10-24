@@ -4,6 +4,7 @@ export interface FoodTypes {
   slug: SlugTypes;
   price: string;
   summary: BlurbTypes;
+  _id: string;
   image: {
     asset: any;
   };

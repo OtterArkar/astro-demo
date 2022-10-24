@@ -14,10 +14,17 @@
     "@astrojs/cloudflare": "^3.1.0",
     "@astrojs/svelte": "^1.0.2",
     "@astrojs/tailwind": "^2.1.1",
+    "@nanostores/i18n": "^0.7.0",
+    "@nanostores/persistent": "^0.7.0",
     "@sanity/client": "^3.4.1",
     "@tailwindcss/forms": "^0.5.3",
     "astro": "^1.5.2",
+    "astro-portabletext": "^0.6.1",
+    "nanostores": "^0.7.0",
     "svelte": "^3.46.4",
     "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.7"
   }
 }
