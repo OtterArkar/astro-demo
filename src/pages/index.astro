@@ -10,7 +10,7 @@ const query = `*[_type == "product"][0..20] {
   slug,
   "price":defaultProductVariant.price,
   "image":defaultProductVariant.images[0]{
-   "asset": asset->,
+   "asset": asset->url,
   },
   "summary":blurb.${i18n.get()}
 }`;

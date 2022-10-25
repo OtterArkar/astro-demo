@@ -6,7 +6,7 @@ export interface FoodTypes {
   summary: BlurbTypes;
   _id: string;
   image: {
-    asset: any;
+    asset: string;
   };
 }
 

@@ -2,6 +2,7 @@
 import Layout from "src/layouts/Layout.astro";
 import client from '@lib/sanityClient';
 import { PortableText } from "astro-portabletext";
+import SanityImage from "@components/common/SanityImage.svelte";
 const { slug,locale } = Astro.params;
 const query = `*[_type == "product" && slug.current == "${slug}"][0]{
  title,
@@ -10,7 +11,7 @@ const query = `*[_type == "product" && slug.current == "${slug}"][0]{
   "body":body.${locale.toString()},
   "price":defaultProductVariant.price,
   "image":defaultProductVariant.images[0]{
-    "asset": asset->,
+    "asset": asset->url,
   },
   "summary":blurb.${locale.toString()}
 }`
@@ -31,6 +32,8 @@ if (!data) return Astro.redirect("/404");
                     )
                 }
             </div>
+
+            <SanityImage image={data.image.asset} width={300} alt={data.title}/>
             <div class="pt-8 prose ">
                 <PortableText value={data.body}/>
             </div>

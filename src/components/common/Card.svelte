@@ -1,9 +1,10 @@
 <script lang='ts'>
 	import { i18n } from '@store/locale';
 	import { items } from '@store/cart';
-
+    import SanityImage from '@components/common/SanityImage.svelte';
     import {cart} from '@store/nano-cart'
     import type { FoodTypes } from '@components/types';
+  import { dataset_dev } from 'svelte/internal';
     export let food:FoodTypes;
     let addToCart = ()=>{
         let tmp = cart.get()
@@ -16,7 +17,8 @@
     } 
 </script>
 <div class='p-4 flex flex-col border rounded-md cursor-pointer'>
-        <div class='w-full aspect-video bg-gray-200'>
+        <div class='w-full aspect-video grid place-items-center'>
+            <SanityImage image={food.image.asset} alt={food.title} width={200} />
         </div>
         <div class=' flex justify-between my-4'>
         <span class='text-md  rounded-full'>{food.price}$</span>
