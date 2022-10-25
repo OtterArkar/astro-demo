@@ -4,7 +4,6 @@
     import SanityImage from '@components/common/SanityImage.svelte';
     import {cart} from '@store/nano-cart'
     import type { FoodTypes } from '@components/types';
-  import { dataset_dev } from 'svelte/internal';
     export let food:FoodTypes;
     let addToCart = ()=>{
         let tmp = cart.get()
